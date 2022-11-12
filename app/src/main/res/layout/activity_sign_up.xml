@@ -10,9 +10,12 @@
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_left"
-        android:background="@color/white"
-        android:layout_margin="20dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_arrow_left" />
 
     <TextView
         android:id="@+id/welcome"
@@ -200,7 +203,7 @@
 
     </ScrollView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/signUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -221,6 +224,6 @@
             android:textSize="16dp"
             android:textColor="@color/black" />
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>
