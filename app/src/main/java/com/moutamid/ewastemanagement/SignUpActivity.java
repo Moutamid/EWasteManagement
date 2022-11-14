@@ -20,5 +20,10 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(new Intent(SignUpActivity.this, MainActivity.class));
             finish();
         });
+
+        binding.signUpBtn.setOnClickListener(v -> {
+            startActivity(new Intent(SignUpActivity.this, CategoriesActivity.class));
+            finish();
+        });
     }
 }

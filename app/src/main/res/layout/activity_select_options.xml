@@ -70,7 +70,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/"
+                    android:id="@+id/repairBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -91,6 +91,7 @@
                             android:src="@drawable/repair_image" />
 
                         <TextView
+                            android:id="@+id/repairTv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -111,6 +112,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/recycleBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -131,6 +133,7 @@
                             android:src="@drawable/recycle_image" />
 
                         <TextView
+                            android:id="@+id/recycleTV"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"

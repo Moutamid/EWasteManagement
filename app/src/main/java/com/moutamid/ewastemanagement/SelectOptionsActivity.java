@@ -2,13 +2,22 @@ package com.moutamid.ewastemanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-public class SelectOptionsActivity extends AppCompatActivity {
+import com.moutamid.ewastemanagement.databinding.ActivitySelectOptionsBinding;
 
+public class SelectOptionsActivity extends AppCompatActivity {
+    ActivitySelectOptionsBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_options);
+        binding = ActivitySelectOptionsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.submitBtn.setOnClickListener(v -> {
+            startActivity(new Intent(this, DashboardActivity.class));
+            finish();
+        });
     }
 }
