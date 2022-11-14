@@ -35,6 +35,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/resuse_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -55,6 +56,7 @@
                             android:src="@drawable/reuse_image" />
 
                         <TextView
+                            android:id="@+id/reuseTv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -68,6 +70,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -181,23 +184,26 @@
         android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        app:cardElevation="6dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         app:cardBackgroundColor="@color/yellow"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="15dp"
+        app:cardElevation="6dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Submit"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
             android:layout_margin="15dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/textblack"
             android:textSize="16dp"
-            android:textColor="@color/textblack" />
+            android:textStyle="bold" />
 
     </com.google.android.material.card.MaterialCardView>
 
