@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.card.MaterialCardView;
+import com.moutamid.ewastemanagement.AllCategoryActivity;
 import com.moutamid.ewastemanagement.R;
 import com.moutamid.ewastemanagement.SearchActivity;
 import com.moutamid.ewastemanagement.databinding.FragmentHomeBinding;
@@ -32,6 +33,10 @@ public class HomeFragment extends Fragment {
 
         binding.searchBtn.setOnClickListener(v -> {
             startActivity(new Intent(view.getContext(), SearchActivity.class));
+        });
+
+        binding.morebtn.setOnClickListener(v -> {
+            startActivity(new Intent(view.getContext(), AllCategoryActivity.class));
         });
 
         return view;
