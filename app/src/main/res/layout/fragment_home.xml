@@ -1,185 +1,434 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/header"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="Lorem Ipsum\nDolor Text"
-            android:textColor="@color/white"
-            android:layout_marginTop="25dp"
-            android:textSize="32dp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/signUpBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12sp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="6dp">
+            android:background="@drawable/background"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="25dp">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:text="outdoor dining"
-                android:textAllCaps="true"
-                android:textColor="@color/textblack"
-                android:textSize="16dp"
+                android:text="Lorem Ipsum\nDolor Text"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"
+                android:textSize="32dp"
                 android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/signUpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="12sp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="outdoor dining"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textblack"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="4dp"
+            android:layout_below="@id/header"
+            android:layout_marginTop="-25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Search for Electronics, Appliances..."
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:layout_marginStart="8sp" />
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="120dp" />
-
-    </LinearLayout>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/searchBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="6dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="4dp"
-        android:layout_below="@id/header"
-        android:layout_marginTop="-25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp">
-
         <LinearLayout
+            android:id="@+id/categoriesLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="12sp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBtn"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25sp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_search" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Search for Electronics, Appliances..."
-                android:textColor="@color/black"
-                android:fontFamily="@font/inter"
-                android:layout_marginStart="8sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/computer" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Computers"
+                            android:gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="6dp"
+                    app:cardElevation="0dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/camera" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cameras"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/television" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TVs"
+                            android:gravity="center"
+                            android:letterSpacing="0.2"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/home_appliance" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kitchen Appliances"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="6dp"
+                    app:cardElevation="0dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/laptop" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Laptops"
+                            android:gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/hard_drive" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hard Disks"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/printer" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Printers"
+                            android:gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="6dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_dots" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="More"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <LinearLayout
-        android:id="@+id/categoriesLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchBtn"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="25sp"
-        android:layout_marginEnd="12dp"
-        android:orientation="vertical">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/recom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12sp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_margin="25dp"
+            android:text="Recommendations"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/categoriesLayout" />
 
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/computer" />
-
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/camera" />
-
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/television" />
-
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/home_appliance" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12sp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_below="@id/recom" />
 
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/laptop" />
+    </RelativeLayout>
 
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/hard_drive" />
-
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                android:src="@drawable/printer" />
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:src="@drawable/ic_dots" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:text="Recommendations"
-        android:textSize="18sp"
-        android:fontFamily="@font/roboto"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_below="@id/categoriesLayout" />
-
-</RelativeLayout>
+</ScrollView>
