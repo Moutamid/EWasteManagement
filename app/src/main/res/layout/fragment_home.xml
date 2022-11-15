@@ -427,6 +427,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            tools:listitem="@layout/recommended_card"
             android:layout_below="@id/recom" />
 
     </RelativeLayout>
