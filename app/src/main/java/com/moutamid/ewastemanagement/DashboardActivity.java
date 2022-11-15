@@ -21,7 +21,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.bottomNav.setItemIconTintList(null);
+        //binding.bottomNav.setItemIconTintList(null);
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
 
         binding.bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
