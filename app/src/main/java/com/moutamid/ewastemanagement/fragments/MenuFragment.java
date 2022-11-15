@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.moutamid.ewastemanagement.AddBusinessActivity;
 import com.moutamid.ewastemanagement.ProfileActivity;
 import com.moutamid.ewastemanagement.R;
 import com.moutamid.ewastemanagement.databinding.FragmentMenuBinding;
@@ -30,6 +31,10 @@ public class MenuFragment extends Fragment {
 
         binding.Profile.setOnClickListener(v -> {
             startActivity(new Intent(view.getContext(), ProfileActivity.class));
+        });
+
+        binding.addBusiness.setOnClickListener(v -> {
+            startActivity(new Intent(view.getContext(), AddBusinessActivity.class));
         });
 
         return view;

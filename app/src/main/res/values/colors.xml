@@ -14,4 +14,7 @@
     <color name="grey_d">#808080</color>
     <color name="red">#EB5757</color>
     <color name="textblack">#BD000000</color>
+
+    <color name="bottom_border">#e5e5e5</color>
+
 </resources>
