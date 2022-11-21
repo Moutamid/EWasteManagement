@@ -15,6 +15,7 @@
     <color name="red">#EB5757</color>
     <color name="textblack">#BD000000</color>
 
-    <color name="bottom_border">#e5e5e5</color>
+    <color name="border">#e5e5e5</color>
+    <color name="bottom_border">#E6E5E5</color>
 
 </resources>
