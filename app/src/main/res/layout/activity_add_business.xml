@@ -43,109 +43,154 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/text"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter"
-        android:layout_below="@id/toolbar"
-        android:padding="12dp"
-        android:text="Required Information"
-        android:textColor="@color/black" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
-    <LinearLayout
-        android:id="@+id/layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:layout_below="@id/text"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/businessName"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:textSize="15dp"
-            android:padding="15sp"
-            android:fontFamily="@font/inter"
-            android:textColorHint="@color/black"
-            android:hint="Business Name" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/category"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Category"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter"
-            android:textSize="15dp"
-            android:gravity="start"
-            android:textAllCaps="false"
-            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
-            android:padding="15sp" />
 
-        <EditText
-            android:id="@+id/callingNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:fontFamily="@font/inter"
-            android:textSize="15dp"
-            android:padding="15sp"
-            android:textColorHint="@color/black"
-            android:inputType="number"
-            android:hint="Calling Number" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Required Information"
+                android:textColor="@color/black" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@id/text"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout"
-        android:layout_marginTop="20sp"
-        android:fontFamily="@font/inter"
-        android:padding="12dp"
-        android:text="Add An Image"
-        android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/businessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:textSize="15dp"
+                    android:padding="15sp"
+                    android:fontFamily="@font/inter"
+                    android:textColorHint="@color/black"
+                    android:hint="Business Name" />
 
-    <TextView
-        android:id="@+id/uploadImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text2"
-        android:background="@color/white"
-        android:drawableRight="@drawable/ic_baseline_add_a_photo_24"
-        android:fontFamily="@font/inter"
-        android:gravity="start"
-        android:padding="15sp"
-        android:text="Upload Image"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="15dp" />
+                <Button
+                    android:id="@+id/category"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:textSize="15dp"
+                    android:gravity="start"
+                    android:textAllCaps="false"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:padding="15sp" />
 
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/uploadImage"
-        android:layout_marginTop="20sp"
-        android:fontFamily="@font/inter"
-        android:padding="12dp"
-        android:text="Rating Count"
-        android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/callingNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/inter"
+                    android:textSize="15dp"
+                    android:padding="15sp"
+                    android:textColorHint="@color/black"
+                    android:inputType="number"
+                    android:hint="Calling Number" />
 
-    <TextView
-        android:id="@+id/text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text3"
-        android:layout_marginTop="20sp"
-        android:fontFamily="@font/inter"
-        android:padding="12dp"
-        android:text="Map Location"
-        android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Add An Image"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/uploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:background="@color/white"
+                android:drawableRight="@drawable/ic_baseline_add_a_photo_24"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:padding="15sp"
+                android:text="Upload Image"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadImage"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Rating Count"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/ratingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text3"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratingLayout"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Map Location"
+                android:textColor="@color/black" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/maplocation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/text4" />
+
+
+            <Button
+                android:id="@+id/addBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_below="@id/maplocation"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="25dp"
+                android:text="Add Business"
+                android:fontFamily="@font/inter"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

@@ -433,10 +433,11 @@
             android:layout_below="@id/categoriesLayout" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendedRC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/recommended_card"
-            android:layout_below="@id/recom" />
+            android:layout_below="@id/recom"
+            tools:listitem="@layout/recommended_card" />
 
     </RelativeLayout>
 
