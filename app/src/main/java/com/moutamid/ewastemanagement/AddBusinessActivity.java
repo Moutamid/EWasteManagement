@@ -1,5 +1,6 @@
 package com.moutamid.ewastemanagement;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,12 +23,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.moutamid.ewastemanagement.adapters.SubCatagoryAdapter;
 import com.moutamid.ewastemanagement.databinding.ActivityAddBusinessBinding;
 
 import java.util.ArrayList;
 
-public class AddBusinessActivity extends AppCompatActivity {
+public class AddBusinessActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     String name[] = {"Computer & Laptops", "TVs, Video-Audio", "Camera & Lenses", "Games & Entertainment", "Fridges", "ACs", "Washing Machine", "Computer Accessories", "Hard Disks", "Printers & Monitors"};
     ArrayList<String> list;
@@ -63,6 +69,11 @@ public class AddBusinessActivity extends AppCompatActivity {
                     .maxResultSize(1080, 1080)	//Final image resolution will be less than 1080 x 1080(Optional)
                     .start();
         });
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
 
     }
 
@@ -120,5 +131,12 @@ public class AddBusinessActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(0, 0))
+                .title("Marker"));
     }
 }

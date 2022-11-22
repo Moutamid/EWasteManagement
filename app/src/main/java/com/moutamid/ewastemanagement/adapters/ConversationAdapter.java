@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +13,8 @@ import com.moutamid.ewastemanagement.R;
 import com.moutamid.ewastemanagement.models.ConversationModel;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapter.ConversationVH> {
 
@@ -40,7 +43,10 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ConversationVH holder, int position) {
-
+        ConversationModel model = list.get(position);
+        holder.message.setText(model.getMessage());
+        holder.time.setText(model.getTime());
+        holder.profile.setImageResource(model.getLogo());
     }
 
     @Override
@@ -59,9 +65,14 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
     }
 
     public class ConversationVH extends RecyclerView.ViewHolder{
+        TextView message, time;
+        CircleImageView profile;
 
         public ConversationVH(@NonNull View itemView) {
             super(itemView);
+            message = itemView.findViewById(R.id.message);
+            time = itemView.findViewById(R.id.date);
+            profile = itemView.findViewById(R.id.image);
         }
     }
 }

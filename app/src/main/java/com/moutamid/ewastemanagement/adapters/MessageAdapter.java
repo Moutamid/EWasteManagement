@@ -1,6 +1,7 @@
 package com.moutamid.ewastemanagement.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moutamid.ewastemanagement.ConversationActivity;
 import com.moutamid.ewastemanagement.R;
 import com.moutamid.ewastemanagement.models.MessageModel;
 
@@ -40,6 +42,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         holder.date.setText(model.getDate());
         holder.last.setText(model.getLast_message());
         holder.name.setText(model.getName());
+
+        holder.itemView.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, ConversationActivity.class));
+        });
     }
 
     @Override
