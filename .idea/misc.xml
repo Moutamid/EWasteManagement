@@ -23,6 +23,7 @@
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/drawable/more_icon.xml" value="0.13" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/drawable/option_selector.xml" value="0.1925" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/drawable/round.xml" value="0.165" />
+        <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/drawable/round_border.xml" value="0.176" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/drawable/round_grey.xml" value="0.2025" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_add_business.xml" value="0.25" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_all_category.xml" value="0.25" />
@@ -31,7 +32,7 @@
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_detail_map.xml" value="0.1718683197947841" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
-        <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_list_detail.xml" value="0.5" />
+        <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_list_detail.xml" value="0.33" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/BridgeLinxProject/EWasteManagement/app/src/main/res/layout/activity_map_detail.xml" value="0.1718683197947841" />
